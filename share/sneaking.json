@@ -1,0 +1,29 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.ice_snea": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "ice_snea": "query.is_sneaking"
+                        }
+                    ]
+                },
+                "ice_snea": {
+                    "on_entry": [
+                        "/tag @s add ice_snea"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove ice_snea"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!query.is_sneaking"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
